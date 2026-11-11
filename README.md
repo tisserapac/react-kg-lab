@@ -11,6 +11,10 @@ Hands-on lab for the lecture *Knowledge Graphs for React Code Generation*
 4. **Retrieve**: for two coding tasks (D2, D3), find the information each task needs in
    the graph and build a **context block** for an LLM.
 
+**Missed part of the live demo, or want to redo it at your own pace?** Follow
+[WORKSHEET.md](WORKSHEET.md): step by step, with what you should see and questions to
+check yourself (about an hour).
+
 The lab shows the idea, not a finished system. The questions it leaves open are in
 [docs/ideas.md](docs/ideas.md): that is where your own proposals start.
 
@@ -143,6 +147,7 @@ kglab/                     shared code: settings, LLM call, Memgraph helpers
 prompts/function_components/   the few-shot prompt: instructions + examples
 queries/                   Cypher: explore.cypher, D2.cypher, D3.cypher
 tasks/                     what D2 and D3 need from the graph
+WORKSHEET.md               the demo, step by step, at your own pace
 docs/ideas.md              open questions for your proposals
 output/                    what the scripts write (git-ignored)
 ```
