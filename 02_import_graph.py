@@ -54,7 +54,9 @@ def main() -> None:
         driver, "MATCH ()-[r]->() RETURN type(r) AS relationship, count(*) AS count ORDER BY count DESC"
     )
     print(memgraph.table(cols, rows))
-    print("\nOpen Memgraph Lab (http://localhost:3000) to see the graph, or run step 3.")
+    _, totals = memgraph.run(driver, "MATCH (n) WITH count(n) AS n MATCH ()-[r]->() RETURN n, count(r)")
+    print(f"\nGraph loaded: {totals[0][0]} nodes, {totals[0][1]} relationships.")
+    print("Open Memgraph Lab (http://localhost:3000) to see the graph, or run step 3.")
     driver.close()
 
 
