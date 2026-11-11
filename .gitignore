@@ -1,0 +1,17 @@
+# secrets
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# script output (regenerate with the scripts)
+output/
+
+# editors and OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

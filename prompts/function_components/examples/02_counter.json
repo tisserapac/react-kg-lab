@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "name": "Counter",
+      "syntax": "arrow",
+      "exportType": "named",
+      "props": ["step", "onLimit"],
+      "hooks": [
+        {"name": "useState", "source": "react"},
+        {"name": "useTheme", "source": "../hooks/useTheme"}
+      ]
+    },
+    {
+      "name": "Label",
+      "syntax": "arrow",
+      "exportType": "none",
+      "props": ["text"],
+      "hooks": []
+    },
+    {
+      "name": "CounterWithLabel",
+      "syntax": "function",
+      "exportType": "named",
+      "props": [],
+      "hooks": []
+    }
+  ]
+}

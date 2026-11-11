@@ -1,0 +1,11 @@
+{
+  "components": [
+    {
+      "name": "Greeting",
+      "syntax": "function",
+      "exportType": "default",
+      "props": ["user", "showTime"],
+      "hooks": []
+    }
+  ]
+}
