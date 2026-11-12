@@ -61,6 +61,46 @@ an example with an *empty* answer?
 It teaches the model what **not** to report. `useWindowWidth` is a custom hook: it is a
 function, but it returns a number, not JSX, so it is not a component. Without such an
 example, a model might list every function it sees.
+
+**Optional: compare with a syntax tree (5 min).** A parser reads code into an
+*abstract syntax tree* (AST). Let's see what it says about the same file.
+
+1. Open https://astexplorer.net/ (the language at the top should be **JavaScript**).
+2. Copy the whole of `prompts/function_components/examples/03_use_window_width.js`
+   and paste it into the left box, replacing what is there.
+3. The right box shows the AST. Switch it to **JSON** to see it as text. Shortened,
+   it looks like this:
+
+   ```json
+   {
+     "type": "Program",
+     "body": [
+       { "type": "ImportDeclaration", "source": { "value": "react" } },
+       {
+         "type": "FunctionDeclaration",
+         "id": { "type": "Identifier", "name": "useWindowWidth" },
+         "params": [],
+         "body": { "type": "BlockStatement", "body": [
+           { "type": "VariableDeclaration" },
+           { "type": "ExpressionStatement" },
+           { "type": "ReturnStatement", "argument": { "type": "Identifier", "name": "width" } }
+         ] }
+       },
+       { "type": "ExportDefaultDeclaration", "declaration": { "type": "Identifier", "name": "useWindowWidth" } }
+     ]
+   }
+   ```
+
+The AST describes **syntax**: `useWindowWidth` is a `FunctionDeclaration` that returns
+an identifier. A component such as `function Greeting(...)` in example 1 is *also* a
+`FunctionDeclaration`. Nothing in the tree says "custom hook" or "component"; to tell
+them apart from an AST you would write the rules yourself (does the name start with
+`use`? does it return JSX?). The few-shot prompt gives the LLM those ideas through the
+instructions and examples, and it answers in terms of React concepts: `{"components": []}`.
+
+**Q1b.** What does the parser do better than the LLM? (Think: cost, speed, and whether
+the answer is ever wrong.) This trade-off is one of the open questions in
+[docs/ideas.md](docs/ideas.md) ("Prompting vs. parsing").
 </details>
 
 **Step 3. Run it on one file** (needs an API key in `.env`):
