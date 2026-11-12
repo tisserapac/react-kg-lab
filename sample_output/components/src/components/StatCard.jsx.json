@@ -1,0 +1,15 @@
+{
+  "file": "src/components/StatCard.jsx",
+  "components": [
+    {
+      "name": "StatCard",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "value",
+        "label"
+      ],
+      "hooks": []
+    }
+  ]
+}

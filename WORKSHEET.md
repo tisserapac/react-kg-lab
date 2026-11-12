@@ -27,8 +27,9 @@ and `react-kg-lab` (this repo). Commands starting with `uv run` are typed in
    cd ../react-kg-lab
    ```
 
-> **No API key?** You can still do everything. In Part 1, do steps 1–2 and read the
-> example output given there; Parts 2–5 need no key.
+> **No API key?** You can still do everything. In Part 1, do steps 1–2, then read the
+> results we saved for you in [sample_output/](sample_output/) instead of running
+> steps 3–5. Parts 2–5 need no key.
 
 ---
 
@@ -137,6 +138,9 @@ It reads 17 files (about 10 seconds) and ends with a list:
 `Found 11 function components in 17 files (0 errors)`. The JSON for each file is saved
 in `output/components/`.
 
+*No key?* The same results are in `sample_output/components/` (one file per source
+file) and `sample_output/components.json` (all 17 in one list).
+
 **Q2.** Six files gave `{"components": []}`, for example `src/hooks/useMovies.js` and
 `src/main.jsx`. Is that correct?
 
@@ -152,6 +156,9 @@ does not define a component.
 ```bash
 uv run python 01_extract_components.py --zero-shot
 ```
+
+The results go to `output/components_zero_shot/`. *No key?* Compare
+`sample_output/components.json` with `sample_output/components_zero_shot.json`.
 
 **Q3.** Is the result different? What does that tell you?
 

@@ -1,0 +1,17 @@
+{
+  "file": "src/components/MovieList.jsx",
+  "components": [
+    {
+      "name": "MovieList",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "movies",
+        "emptyMessage",
+        "onToggle",
+        "onDelete"
+      ],
+      "hooks": []
+    }
+  ]
+}

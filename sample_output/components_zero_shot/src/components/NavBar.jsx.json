@@ -1,0 +1,12 @@
+{
+  "file": "src/components/NavBar.jsx",
+  "components": [
+    {
+      "name": "NavBar",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [],
+      "hooks": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "file": "src/pages/NotFoundPage.jsx",
+  "components": [
+    {
+      "name": "NotFoundPage",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [],
+      "hooks": []
+    }
+  ]
+}

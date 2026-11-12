@@ -1,0 +1,204 @@
+[
+  {
+    "file": "src/App.jsx",
+    "components": [
+      {
+        "name": "App",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/components/AddMovieForm.jsx",
+    "components": [
+      {
+        "name": "AddMovieForm",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "onAdd"
+        ],
+        "hooks": [
+          {
+            "name": "useState",
+            "source": "react"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "src/components/FilterBar.jsx",
+    "components": [
+      {
+        "name": "FilterBar",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "filter",
+          "onFilterChange"
+        ],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/components/MovieCard.jsx",
+    "components": [
+      {
+        "name": "MovieCard",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "title",
+          "year",
+          "genre",
+          "watched",
+          "onToggle",
+          "onDelete"
+        ],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/components/MovieList.jsx",
+    "components": [
+      {
+        "name": "MovieList",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "movies",
+          "emptyMessage",
+          "onToggle",
+          "onDelete"
+        ],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/components/NavBar.jsx",
+    "components": [
+      {
+        "name": "NavBar",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/components/StatCard.jsx",
+    "components": [
+      {
+        "name": "StatCard",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "value",
+          "label"
+        ],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/context/MoviesContext.js",
+    "components": []
+  },
+  {
+    "file": "src/context/MoviesProvider.jsx",
+    "components": [
+      {
+        "name": "MoviesProvider",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [
+          "children"
+        ],
+        "hooks": [
+          {
+            "name": "useLocalStorage",
+            "source": "../hooks/useLocalStorage"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "src/data/genres.js",
+    "components": []
+  },
+  {
+    "file": "src/data/initialMovies.js",
+    "components": []
+  },
+  {
+    "file": "src/hooks/useLocalStorage.js",
+    "components": []
+  },
+  {
+    "file": "src/hooks/useMovies.js",
+    "components": []
+  },
+  {
+    "file": "src/main.jsx",
+    "components": []
+  },
+  {
+    "file": "src/pages/NotFoundPage.jsx",
+    "components": [
+      {
+        "name": "NotFoundPage",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [],
+        "hooks": []
+      }
+    ]
+  },
+  {
+    "file": "src/pages/StatsPage.jsx",
+    "components": [
+      {
+        "name": "StatsPage",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [],
+        "hooks": [
+          {
+            "name": "useMovies",
+            "source": "../hooks/useMovies"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "file": "src/pages/WatchlistPage.jsx",
+    "components": [
+      {
+        "name": "WatchlistPage",
+        "syntax": "function",
+        "exportType": "default",
+        "props": [],
+        "hooks": [
+          {
+            "name": "useMovies",
+            "source": "../hooks/useMovies"
+          },
+          {
+            "name": "useState",
+            "source": "react"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+{
+  "file": "src/components/MovieCard.jsx",
+  "components": [
+    {
+      "name": "MovieCard",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "title",
+        "year",
+        "genre",
+        "watched",
+        "onToggle",
+        "onDelete"
+      ],
+      "hooks": []
+    }
+  ]
+}

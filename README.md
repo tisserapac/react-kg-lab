@@ -75,6 +75,8 @@ The second command sends every `.js`/`.jsx` file of the app (17 files, about 10 
 checks each reply against the schema (`pydantic`), prints the JSON and saves it in
 `output/components/`. Expected result: 11 function components.
 
+No API key? The results of both runs are saved in [sample_output/](sample_output/).
+
 Try `--zero-shot` (no examples) and compare. On this small app the result is the
 same; finding where examples *do* matter is the first question in
 [docs/ideas.md](docs/ideas.md). To add an example, add a `NN_name.jsx` + `NN_name.json` pair.
@@ -149,5 +151,6 @@ queries/                   Cypher: explore.cypher, D2.cypher, D3.cypher
 tasks/                     what D2 and D3 need from the graph
 WORKSHEET.md               the demo, step by step, at your own pace
 docs/ideas.md              open questions for your proposals
+sample_output/             step 1's JSON, saved for students without an API key
 output/                    what the scripts write (git-ignored)
 ```

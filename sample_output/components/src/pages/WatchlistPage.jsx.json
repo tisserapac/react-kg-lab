@@ -1,0 +1,21 @@
+{
+  "file": "src/pages/WatchlistPage.jsx",
+  "components": [
+    {
+      "name": "WatchlistPage",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [],
+      "hooks": [
+        {
+          "name": "useMovies",
+          "source": "../hooks/useMovies"
+        },
+        {
+          "name": "useState",
+          "source": "react"
+        }
+      ]
+    }
+  ]
+}

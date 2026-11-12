@@ -1,0 +1,19 @@
+{
+  "file": "src/context/MoviesProvider.jsx",
+  "components": [
+    {
+      "name": "MoviesProvider",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "children"
+      ],
+      "hooks": [
+        {
+          "name": "useLocalStorage",
+          "source": "../hooks/useLocalStorage"
+        }
+      ]
+    }
+  ]
+}

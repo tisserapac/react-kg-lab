@@ -1,0 +1,17 @@
+{
+  "file": "src/pages/StatsPage.jsx",
+  "components": [
+    {
+      "name": "StatsPage",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [],
+      "hooks": [
+        {
+          "name": "useMovies",
+          "source": "../hooks/useMovies"
+        }
+      ]
+    }
+  ]
+}

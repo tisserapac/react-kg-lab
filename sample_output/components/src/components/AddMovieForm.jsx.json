@@ -1,0 +1,19 @@
+{
+  "file": "src/components/AddMovieForm.jsx",
+  "components": [
+    {
+      "name": "AddMovieForm",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "onAdd"
+      ],
+      "hooks": [
+        {
+          "name": "useState",
+          "source": "react"
+        }
+      ]
+    }
+  ]
+}

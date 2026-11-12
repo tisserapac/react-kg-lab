@@ -1,0 +1,15 @@
+{
+  "file": "src/components/FilterBar.jsx",
+  "components": [
+    {
+      "name": "FilterBar",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [
+        "filter",
+        "onFilterChange"
+      ],
+      "hooks": []
+    }
+  ]
+}

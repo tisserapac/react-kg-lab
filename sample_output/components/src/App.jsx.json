@@ -1,0 +1,12 @@
+{
+  "file": "src/App.jsx",
+  "components": [
+    {
+      "name": "App",
+      "syntax": "function",
+      "exportType": "default",
+      "props": [],
+      "hooks": []
+    }
+  ]
+}
