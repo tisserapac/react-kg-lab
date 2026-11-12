@@ -17,7 +17,7 @@ QUERIES_DIR = REPO_ROOT / "queries"
 PROMPTS_DIR = REPO_ROOT / "prompts"
 
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "anthropic").strip().lower()
-DEFAULT_MODELS = {"anthropic": "claude-opus-5-5", "openai": "gpt-5.5"}
+DEFAULT_MODELS = {"anthropic": "claude-sonnet-5-5", "openai": "gpt-5.5"}
 LLM_MODEL = os.getenv("LLM_MODEL", "").strip() or DEFAULT_MODELS.get(LLM_PROVIDER, "")
 
 MEMGRAPH_URI = os.getenv("MEMGRAPH_URI", "bolt://localhost:7687")

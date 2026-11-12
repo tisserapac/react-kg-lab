@@ -144,7 +144,7 @@ If it asks `Delete them all? [y/N]`, type `y`. It ends with
 In Memgraph Lab, type this query and run it:
 
 ```cypher
-MATCH (n) RETURN n;
+MATCH (n)-[r]->(m) RETURN n, r, m;
 ```
 
 You see the whole small graph: circles are **nodes** (components, files, props, ...),
@@ -156,7 +156,7 @@ lines are **relationships**. Click a node to see its properties.
 uv run python 02_import_graph.py movie-watchlist
 ```
 
-It ends with `Graph loaded: 81 nodes, 118 relationships.` Run `MATCH (n) RETURN n;` in
+It ends with `Graph loaded: 81 nodes, 118 relationships.` Run `MATCH (n)-[r]->(m) RETURN n, r, m;` in
 Lab again.
 
 **Q4.** The full app has 30 more nodes. Compare the two tables the script printed:
@@ -344,5 +344,5 @@ docker compose down
 | `No ANTHROPIC_API_KEY set` | Put your key in `.env`, or skip steps 3–5 of Part 1. |
 | `Cannot find the movie-watchlist app` | Both folders must be next to each other (see README, Setup). |
 | `The graph in Memgraph has no custom hooks` | `uv run python 02_import_graph.py movie-watchlist` |
-| Memgraph Lab shows nothing | Click **Connect** first; then run `MATCH (n) RETURN n;`. |
+| Memgraph Lab shows nothing | Click **Connect** first; then run `MATCH (n)-[r]->(m) RETURN n, r, m;`. |
 | `Unbound variable` in a query | After `collect(...)`, `ORDER BY` the name you gave in `RETURN`. |

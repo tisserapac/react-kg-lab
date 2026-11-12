@@ -132,9 +132,9 @@ block for the same task in `../movie-watchlist/tasks/contexts/`.
 
 ## Costs and models
 
-Step 1 makes one LLM call per file (17 calls). The default model is `claude-opus-5-5`
-(Anthropic) or `gpt-5.5` (OpenAI); set `LLM_MODEL` in `.env` to use another, for example a
-smaller, cheaper one. Steps 2–4 make no LLM calls.
+Step 1 makes one LLM call per file (17 calls). The default model is `claude-sonnet-5-5`
+(Anthropic) or `gpt-5.5` (OpenAI). To use another, set `LLM_MODEL` in `.env`;
+`.env.example` lists a few, including smaller, cheaper ones. Steps 2–4 make no LLM calls.
 
 ## Files
 
