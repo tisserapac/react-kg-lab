@@ -214,21 +214,33 @@ React ideas from the lecture: custom hooks, Context and routing.
 
 ## Part 3: Ask the graph questions with Cypher (15 min)
 
-**Step 1. Run the prepared queries:**
+**Step 1. See which queries are prepared:**
 
 ```bash
 uv run python 03_explore_graph.py --list
+```
+
+This prints one line per query in [queries/explore.cypher](queries/explore.cypher)
+(13 in total). Each line has the query's **name**, which starts with its **number**
+(for example `4-routes`), and the **question it answers** (for example *Which page is
+shown at which URL?*). It only lists them; nothing is run yet.
+
+**Step 2. Run two of them**, by their numbers:
+
+```bash
 uv run python 03_explore_graph.py 3 9
 ```
 
-Query 3 prints the component tree; query 9 shows how the pages reach the movie list:
+For each query it prints the question, the Cypher, and the result. Query 3 prints the
+component tree; query 9 shows how the pages reach the movie list:
 `WatchlistPage → useMovies → MoviesContext ← MoviesProvider`.
 
-**Step 2. See them as a graph.** Open [queries/explore.cypher](queries/explore.cypher),
+**Step 3. See them as a graph.** Open [queries/explore.cypher](queries/explore.cypher),
 copy the block of query `9-context-chain` (from `MATCH` to `;`), paste it into Memgraph
 Lab and run it. Queries that return a path (`RETURN p`) are drawn as a graph.
 
-**Step 3. Read a query.** This one is from the lecture slides:
+**Step 4. Read a query.** This one is from the lecture slides. It answers the question
+*"Which parts of the app read a React Context, and which Context do they read?"*
 
 ```cypher
 MATCH (h)-[:CONSUMES_CONTEXT]->(c:Context)
@@ -237,9 +249,11 @@ RETURN h.name, c.name;
 
 Read it as: *find any node `h` with a `CONSUMES_CONTEXT` arrow to a node `c` labelled
 `Context`; show their names.* Run it in Lab. Result: `useMovies`, `MoviesContext`.
+So only one thing reads the Context directly: the custom hook `useMovies`. The pages get
+the movie list through that hook, which is the path you saw in query 9.
 
-**Step 4. Write your own.** Try these in Lab before opening the answers. Start from
-the query in Step 3 and change the arrow type and the names.
+**Step 5. Write your own.** Try these in Lab before opening the answers. Start from
+the query in Step 4 and change the arrow type and the names.
 
 **Q5.** Which components does `WatchlistPage` render? (Arrow type: `USES_COMPONENT`.)
 
